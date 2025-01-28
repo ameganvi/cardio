@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f9;
+  color: #333;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+  color: #444;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background: #007BFF;
+  color: white;
+  transition: background 0.3s;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+#yearly-counter {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  color : red;
+}
+
+
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    padding: 10px 0;
+    background: #f8f9fa;
+    border-top: 1px solid #ddd;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  footer strong {
+    color: #007BFF;
+  }
