@@ -1,25 +1,62 @@
+/* Global Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background: #f4f4f9;
   color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
 }
 
+/* Header Styles */
+header {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: white; /* Keeps it clear while making sure text is visible */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+/* Container - Centering the content */
 .container {
   max-width: 600px;
-  margin: 50px auto;
-  text-align: center;
+  width: 90%;
+  margin: 120px auto 20px; /* Push content down to avoid overlap with the header */
   background: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Text Styles */
 h1, h2 {
   color: #444;
 }
 
+  h1{
+    font-weight: 100;
+    font-size: larger;
+  }
+
+
+p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+/* Buttons */
 button {
   padding: 10px 20px;
   margin: 10px;
@@ -41,34 +78,68 @@ button:hover:not(:disabled) {
   background: #0056b3;
 }
 
-p {
-  font-size: 18px;
-  margin: 5px 0;
-}
-
+/* Counter Display */
 #yearly-counter {
   font-size: 24px;
   font-weight: bold;
   margin-top: 10px;
-  color : red;
+  color: red;
 }
 
-
-
+/* Footer Styles */
 footer {
-    margin-top: 20px;
-    text-align: center;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  padding: 15px 0;
+  background: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to match the header */
+}
+
+footer p {
+  margin: 0;
+}
+
+footer strong {
+  color: #007BFF;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #0073b1;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    margin-top: 140px;
+  }
+
+  header {
+    font-size: 20px;
+    padding: 15px 0;
+  }
+
+  p, h1, h2 {
+    font-size: 18px;
+  }
+
+  
+  button {
     font-size: 14px;
-    color: #666;
-    padding: 10px 0;
-    background: #f8f9fa;
-    border-top: 1px solid #ddd;
+    padding: 8px 16px;
   }
-  
-  footer p {
-    margin: 0;
-  }
-  
-  footer strong {
-    color: #007BFF;
-  }
+}
