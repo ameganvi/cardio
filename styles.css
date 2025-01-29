@@ -9,8 +9,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  height: 99vh; /* Prevent scrolling */
   text-align: center;
+  overflow: hidden; /* No scrollbars */
 }
 
 /* Header Styles */
@@ -25,19 +26,39 @@ header {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: white; /* Keeps it clear while making sure text is visible */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Container - Centering the content */
+/* Recommendation Section */
+.reco {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007BFF;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
+  margin-top: 80px; /* Prevent overlap with header */
+  text-align: center;
+}
+
+/* Centered Content Container */
 .container {
   max-width: 600px;
   width: 90%;
-  margin: 120px auto 20px; /* Push content down to avoid overlap with the header */
-  background: #fff;
+  margin-top: 100px; /* More spacing below header */
   padding: 20px;
+  background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 60vh; /* Avoid excessive height */
+  overflow-y: auto; /* Enable scrolling inside container */
 }
 
 /* Text Styles */
@@ -45,18 +66,24 @@ h1, h2 {
   color: #444;
 }
 
-  h1{
-    font-weight: 100;
-    font-size: larger;
-  }
-
+h1 {
+  font-size: 22px;
+}
 
 p {
   font-size: 18px;
   margin: 5px 0;
 }
 
-/* Buttons */
+/* Counter Display */
+#yearly-counter {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: red;
+}
+
+/* Button Styles */
 button {
   padding: 10px 20px;
   margin: 10px;
@@ -78,36 +105,25 @@ button:hover:not(:disabled) {
   background: #0056b3;
 }
 
-/* Counter Display */
-#yearly-counter {
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: 10px;
-  color: red;
+/* Buttons Container */
+.session button {
+  margin: 5px;
 }
 
-/* Footer Styles */
+/* Footer */
 footer {
   width: 100%;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px; /* Smaller footer */
   color: #666;
-  padding: 15px 0;
+  padding: 10px 0;
   background: white;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   border-top: 1px solid #ddd;
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to match the header */
-}
-
-footer p {
-  margin: 0;
-}
-
-footer strong {
-  color: #007BFF;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
 footer a {
@@ -125,7 +141,12 @@ footer a:hover {
 @media (max-width: 768px) {
   .container {
     width: 95%;
-    margin-top: 140px;
+    margin-top: 120px;
+  }
+
+  .reco {
+    font-size: 16px;
+    padding: 8px;
   }
 
   header {
@@ -133,13 +154,13 @@ footer a:hover {
     padding: 15px 0;
   }
 
-  p, h1, h2 {
+  h1, h2, p {
     font-size: 18px;
   }
 
-  
   button {
     font-size: 14px;
     padding: 8px 16px;
   }
+  
 }
